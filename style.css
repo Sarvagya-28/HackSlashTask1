@@ -1,0 +1,113 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.outer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    background-color: rgb(183, 174, 174);
+    box-shadow: 0px 0px 10px 8px rgb(95, 92, 92);
+    padding: 3rem;
+}
+
+.playground{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.box{
+    border: 5px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+    height: 10vh;
+    width: 10vw;
+}
+
+.help{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 5%;
+    font-size: large;
+    transition: 2ms;
+    cursor: pointer;
+}
+.help:hover{
+    background-color: black;
+    color: #fff;
+    box-shadow: 0px 0px 3px 3px gray;
+}
+
+.memFlash{
+    box-shadow: 0px 0px 10px 10px rgb(24, 24, 22);
+}
+
+.userFlash{
+    box-shadow: 0px 0px 10px 10px rgb(243, 186, 1);
+}
+
+.gameOver{
+    background-color: red;
+}
+
+/* For Responiveness */
+
+/* For small screens (mobile devices) */
+@media screen and (max-width: 600px) {
+    .outer {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .playground {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+
+    .box {
+        width: 20vw;  /* Increase size for better visibility on small screens */
+        height: 10vh;
+    }
+
+    .help {
+        font-size: medium;
+        padding: 3%;
+    }
+}
+
+/* For tablets and medium screens */
+@media screen and (max-width: 900px) {
+    .playground {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box {
+        width: 15vw;
+        height: 12vh;
+    }
+}
+
+/* For large screens (desktops) */
+@media screen and (min-width: 1200px) {
+    .box {
+        width: 8vw;
+        height: 8vh;
+    }
+
+    .help {
+        font-size: large;
+        padding: 6%;
+    }
+}
+
